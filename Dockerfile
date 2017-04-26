@@ -1,6 +1,8 @@
-##############################
-# Debian - PHP 7.0 CLI+FPM  #
-##############################
+################################
+#                              #
+#   Debian - PHP 7.0 CLI+FPM   #
+#                              #
+################################
 
 FROM debian:jessie
 
@@ -107,7 +109,7 @@ RUN rm -rf /var/lib/apt/lists/* \
 	&& apt-get clean -yqq
 
 
-CMD ["exec php-fpm7.0 -c /etc/php/7.0/cli/php.ini"]
+CMD ["/start.sh"]
 
 WORKDIR /var/www/lyberteam
 
