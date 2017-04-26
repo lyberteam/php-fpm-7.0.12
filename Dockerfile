@@ -65,7 +65,7 @@ RUN mkdir /tmp/xdebug \
     && cd /tmp/xdebug \
     && wget -c "http://xdebug.org/files/xdebug-2.5.3.tgz" \
     && tar -xf xdebug-2.5.3.tgz \
-    && cd xdebug/ \
+    && cd xdebug-2.5.3/ \
     && phpize \
     && ./configure \
     && make \
