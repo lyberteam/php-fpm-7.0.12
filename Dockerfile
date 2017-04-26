@@ -108,6 +108,8 @@ RUN rm -rf /var/lib/apt/lists/* \
 	&& rm -rf /tmp/* \
 	&& apt-get clean -yqq
 
+COPY start.sh /start.sh
+RUN chmod +x /start.sh
 
 CMD ["/start.sh"]
 
