@@ -63,8 +63,8 @@ RUN mkdir /tmp/phpredis \
 # Install Xdebug extension
 RUN mkdir /tmp/xdebug \
     && cd /tmp/xdebug \
-    && wget -c "http://xdebug.org/files/xdebug-2.5.3.tgz" -o xdebug.tgz \
-    && tar -xf xdebug.tgz \
+    && wget -c "http://xdebug.org/files/xdebug-2.5.3.tgz" \
+    && tar -xf xdebug-2.5.3.tgz \
     && cd xdebug/ \
     && phpize \
     && ./configure \
