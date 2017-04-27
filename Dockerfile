@@ -13,7 +13,7 @@ RUN /var/www/lyberteam/lyberteam-message.sh
 MAINTAINER Lyberteam <lyberteamltd@gmail.com>
 LABEL Vendor="Lyberteam"
 LABEL Description="PHP-FPM v7.0.18"
-LABEL Version="1.0.3"
+LABEL Version="1.0.4"
 LABEL Thanks="https://github.com/LinMAD"
 
 ENV LYBERTEAM_TIME_ZONE Europe/Kiev
@@ -47,6 +47,7 @@ RUN apt-get update -yqq \
 	php7.0-imap \
 	php7.0-ldap \
 	php7.0-curl \
+	php7.0-gd  \
 	php7.0-dev \
     php7.0-fpm
 
