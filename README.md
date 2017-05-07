@@ -2,6 +2,8 @@
 
  **Helpful PHP-FPM image from oficial debian:jessie**
 
+[![Build Status](https://travis-ci.org/lyberteam/php-fpm-7.0.12.png?branch=master)](https://travis-ci.org/lyberteam/php-fpm-7.0.12)
+
  > PHP-FPM version - 7.0.18  \
  > This image was done from the official php-fpm image; \
  > There are also have installed a lot of useful extensions \
