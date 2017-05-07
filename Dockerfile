@@ -13,8 +13,7 @@ RUN /var/www/lyberteam/lyberteam-message.sh
 MAINTAINER Lyberteam <lyberteamltd@gmail.com>
 LABEL Vendor="Lyberteam"
 LABEL Description="PHP-FPM v7.0.18"
-LABEL Version="1.0.4"
-LABEL Thanks="https://github.com/LinMAD"
+LABEL Version="1.0.5"
 
 ENV LYBERTEAM_TIME_ZONE Europe/Kiev
 
@@ -34,6 +33,7 @@ RUN apt-get update -yqq \
     wget \
     mc \
     curl \
+    php7.0-pgsql \
 	php7.0-mysql \
 	php7.0-opcache \
 	php7.0-common \
@@ -49,6 +49,8 @@ RUN apt-get update -yqq \
 	php7.0-curl \
 	php7.0-gd  \
 	php7.0-dev \
+	php7.0-redis \
+	php7.0-memcached \
     php7.0-fpm
 
 # Add default timezone
@@ -57,11 +59,11 @@ RUN echo "date.timezone=$LYBERTEAM_TIME_ZONE" > /etc/php/7.0/cli/conf.d/timezone
 
 
 # Install phpredis extension
-RUN mkdir /tmp/phpredis \
-    && cd /tmp/phpredis \
-    && git clone -b php7 https://github.com/phpredis/phpredis . \
-    && phpize7.0 && ./configure && make && make install \
-    && echo "extension=redis.so" > /etc/php/7.0/mods-available/redis.ini
+#RUN mkdir /tmp/phpredis \
+#    && cd /tmp/phpredis \
+#    && git clone -b php7 https://github.com/phpredis/phpredis . \
+#    && phpize7.0 && ./configure && make && make install \
+#    && echo "extension=redis.so" > /etc/php/7.0/mods-available/redis.ini
 
 ## Install Xdebug extension
 #RUN mkdir /tmp/xdebug \
