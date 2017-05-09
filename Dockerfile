@@ -13,7 +13,7 @@ RUN /var/www/lyberteam/lyberteam-message.sh
 MAINTAINER Lyberteam <lyberteamltd@gmail.com>
 LABEL Vendor="Lyberteam"
 LABEL Description="PHP-FPM v7.0.18"
-LABEL Version="1.0.5"
+LABEL Version="1.0.6"
 
 ENV LYBERTEAM_TIME_ZONE Europe/Kiev
 
@@ -51,6 +51,7 @@ RUN apt-get update -yqq \
 	php7.0-dev \
 	php7.0-redis \
 	php7.0-memcached \
+	php7.0-imagick \
     php7.0-fpm
 
 # Add default timezone
